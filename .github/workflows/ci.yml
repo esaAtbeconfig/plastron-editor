@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - MaBranche
   pull_request:
 
 permissions:
@@ -52,5 +52,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: master
-          folder: dist/myangularapp
+          branch: gh-pages
+          folder: dist/myangularapp/browser
