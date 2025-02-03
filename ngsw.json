@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1738580319581,
+  "timestamp": 1738582642948,
   "index": "/myangularapp/index.html",
   "assetGroups": [
     {
@@ -15,10 +15,10 @@
         "/myangularapp/chunk-FBVYCW2A.js",
         "/myangularapp/favicon.ico",
         "/myangularapp/index.html",
-        "/myangularapp/main-SHP6ZAV7.js",
+        "/myangularapp/main-7QKO3KIN.js",
         "/myangularapp/manifest.webmanifest",
         "/myangularapp/polyfills-FFHMD2TL.js",
-        "/myangularapp/styles-ZRVWVPCT.css"
+        "/myangularapp/styles-PZ7VX7GS.css"
       ],
       "patterns": []
     },
@@ -59,15 +59,15 @@
     "/myangularapp/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/myangularapp/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/myangularapp/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/myangularapp/index.html": "2608423efd8e4863551d306b14b9682c67f1b705",
-    "/myangularapp/main-SHP6ZAV7.js": "3c7e3c7cf6002e150f9ff1642df43e0bc9c975bd",
+    "/myangularapp/index.html": "478df820499189c47b562a6df910f3f77ac25ebd",
+    "/myangularapp/main-7QKO3KIN.js": "65350224a3727c6ccaa5c27e8735868a22fd64a6",
     "/myangularapp/manifest.webmanifest": "8795f1587af566ea807b11fa05d92d618626744d",
     "/myangularapp/media/primeicons-4GST5W3O.woff2": "837c1279b6af9d297f34fdb43e6fcc9206a79f32",
     "/myangularapp/media/primeicons-DHQU4SEP.svg": "a07ae39027c1a780b42fd82fad7575c2924d9d28",
     "/myangularapp/media/primeicons-GEFHGEHP.ttf": "3b878ca7e88945a8ec25814810b95367d8977ae6",
     "/myangularapp/media/primeicons-P53SE5CV.woff": "361e3af71bb4e515feead2f787348a92a5527158",
     "/myangularapp/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "/myangularapp/styles-ZRVWVPCT.css": "da0512457c54704182f2d72587038d17b50d25fc"
+    "/myangularapp/styles-PZ7VX7GS.css": "9d9b0d34b99b8a3690f7dd44332ac24ee8dded4f"
   },
   "navigationUrls": [
     {
