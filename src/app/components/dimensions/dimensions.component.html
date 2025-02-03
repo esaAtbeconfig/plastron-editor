@@ -1,0 +1,54 @@
+<p-card header="Dimensions">
+       <div class="flex gap-4 flex-wrap">
+              <p-floatLabel variant="on">
+                     <label for="epaisseur">Epaisseur</label>
+                     <p-inputnumber
+                            [ngModel]="item.epaisseur"
+                            (ngModelChange)="item.epaisseur=$event;handleChange()"
+                            id="epaisseur"
+                            title="Epaisseur"
+                     />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="finition">Finition</label>
+                     <input type="text"
+                            pInputText
+                            [ngModel]="item.finition"
+                            (ngModelChange)="item.finition=$event;handleChange()"
+                            id="finition"
+                            title="finition" />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="hauteur">Hauteur</label>
+                     <p-inputnumber
+                            [ngModel]="item.hauteur"
+                            (ngModelChange)="item.hauteur=$event;handleChange()"
+                            id="hauteur"
+                            title="hauteur"
+                     />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="largeur">Largeur</label>
+                     <p-inputnumber
+                            [ngModel]="item.largeur"
+                            (ngModelChange)="item.largeur=$event;handleChange()"
+                            id="largeur"
+                            title="largeur"
+                     />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="matiereType">Type de matière</label>
+                     <input type="text"
+                     pInputText
+                     [ngModel]="item.finition"
+                     (ngModelChange)="item.finition=$event;handleChange()"
+                     id="matiereType"
+                     title="Type de matière" />
+              </p-floatLabel>
+
+       </div>
+</p-card>

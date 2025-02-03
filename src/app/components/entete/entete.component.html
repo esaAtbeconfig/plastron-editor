@@ -1,0 +1,67 @@
+<p-card header="Entête">
+       <div class="flex gap-4 flex-wrap">
+              <p-floatLabel variant="on">
+                     <label for="description">Description</label>
+                     <input type="text"
+                            pInputText
+                            [ngModel]="item.description"
+                            (ngModelChange)="item.description=$event;handleChange()"
+                            title="description"
+                            id="description" />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="id">Id</label>
+                     <input type="text"
+                            pInputText
+                            [ngModel]="item.id"
+                            (ngModelChange)="item.id=$event;handleChange()"
+                            id="id"
+                            title="id" />
+              </p-floatLabel>
+
+
+
+              <p-floatLabel variant="on">
+                     <label for="production">Production</label>
+                     <input type="text"
+                            pInputText
+                            [ngModel]="item.production"
+                            (ngModelChange)="item.production=$event;handleChange()"
+                            title="production"
+                            id="production" />
+
+              </p-floatLabel>
+              <p-floatLabel variant="on">
+                     <label for="reference">Référence</label>
+                     <input type="text"
+                            pInputText
+                            [ngModel]="item.reference"
+                            (ngModelChange)="item.reference=$event;handleChange()"
+                            title="Référence"
+                            id="reference"/>
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="type">Type</label>
+                     <input type="text"
+                            pInputText
+                            [ngModel]="item.type"
+                            (ngModelChange)="item.type=$event;handleChange()"
+                            id="type"
+                            title="type" />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+
+                     <label for="version">Version</label>
+                     <input type="text"
+                     id="version"
+                            pInputText
+                            [ngModel]="item.version"
+                            (ngModelChange)="item.version=$event;handleChange()"
+                            title="version" />
+              </p-floatLabel>
+
+       </div>
+</p-card>

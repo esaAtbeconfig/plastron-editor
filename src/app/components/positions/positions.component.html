@@ -1,0 +1,36 @@
+<p-card>
+    <ng-template #header>
+        <div class="flex items-center justify-between p-4">
+            <span class="p-card-title">Positions</span>
+            <p-button pTooltip="Ajouter une position" icon="pi pi-plus" (onClick)="handleAddPosition()"></p-button>
+        </div>
+    </ng-template>
+
+
+    <div class="flex flex-row flex-wrap gap-4">
+
+        <p-card *ngFor="let position of item">
+            <ng-template #header>
+                <div class="flex items-center justify-between p-4">
+                    <span class="text-xl">Position</span><p-button (onClick)="handleRemovePosition(position)"
+                              icon="pi pi-trash" pTooltip="Supprimer"></p-button>
+                </div>
+            </ng-template>
+            <div class="flex flex-col gap-2">
+                <p-floatLabel variant="on">
+                    <label for="x">X</label>
+                    <p-inputnumber [ngModel]="position.x"
+                                   (ngModelChange)="position.x=$event;handleChange()"
+                                   id="x"></p-inputnumber>
+                </p-floatLabel>
+                <p-floatLabel variant="on">
+                    <label for="y">Y</label>
+                    <p-inputnumber [ngModel]="position.y"
+                                   (ngModelChange)="position.y=$event;handleChange()"
+                                   id="y"></p-inputnumber>
+                </p-floatLabel>
+            </div>
+        </p-card>
+
+    </div>
+</p-card>

@@ -1,0 +1,23 @@
+<div class="md:columns-1 lg:columns-2">
+    <div class="flex flex-col gap-4">
+        <app-entete [value]="plastron.entete"
+                    (valueChange)="plastron.entete=$event;handleChange()"></app-entete>
+        <app-dimensions [value]="plastron.dimensions"
+                        (valueChange)="plastron.dimensions=$event;handleChange()"></app-dimensions>
+        <app-fixations [value]="plastron.fixations"
+                       (valueChange)="plastron.fixations=$event;handleChange()"></app-fixations>
+        <app-positions [value]="plastron.fixations.positions"
+                       (valueChange)="plastron.fixations.positions= $event;handleChange()"></app-positions>
+
+        <p-card>
+            <ng-template #header>
+                <div class="flex items-center justify-between p-4">
+                    <span class="p-card-title">Xml</span><p-button (onClick)="handleCopyToClipboard()"
+                              icon="pi pi-copy"
+                              pTooltip="Copier dans le presse-papier"></p-button>
+                </div>
+            </ng-template>
+            <span>{{xmlString}}</span>
+        </p-card>
+
+    </div>

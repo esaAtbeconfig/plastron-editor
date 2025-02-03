@@ -1,0 +1,25 @@
+<p-card header="Fixations">
+       <div class="flex gap-4 flex-wrap">
+              <p-floatLabel variant="on">
+                     <label for="type">Type</label>
+                     <input type="text"
+                            pInputText
+                            [ngModel]="item.type"
+                            (ngModelChange)="item.type=$event;handleChange()"
+                            title="Type"
+                            id="type" />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="diametre">Diamètre</label>
+                     <p-inputnumber
+                            [ngModel]="item.diametre"
+                            (ngModelChange)="item.diametre=$event;handleChange()"
+                            id="diametre"
+                            title="Diamètre"
+                     />
+              </p-floatLabel>
+
+
+       </div>
+</p-card>
