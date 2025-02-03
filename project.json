@@ -34,7 +34,7 @@
       },
       "configurations": {
         "production": {
-          "baseHref": "/myangularapp/",
+          "baseHref": "/plastron-editor/",
           "budgets": [
             {
               "type": "initial",
