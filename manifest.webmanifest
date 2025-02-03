@@ -1,6 +1,6 @@
 {
-  "name": "myangularapp",
-  "short_name": "myangularapp",
+  "name": "Plastron Editor",
+  "short_name": "Plastron editor",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
