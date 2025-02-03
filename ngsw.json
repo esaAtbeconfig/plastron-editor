@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1738583415502,
+  "timestamp": 1738583578172,
   "index": "/myangularapp/index.html",
   "assetGroups": [
     {
@@ -15,7 +15,7 @@
         "/myangularapp/chunk-FBVYCW2A.js",
         "/myangularapp/favicon.ico",
         "/myangularapp/index.html",
-        "/myangularapp/main-5HRYXHMU.js",
+        "/myangularapp/main-RVENLG3I.js",
         "/myangularapp/manifest.webmanifest",
         "/myangularapp/polyfills-FFHMD2TL.js",
         "/myangularapp/styles-PZ7VX7GS.css"
@@ -59,8 +59,8 @@
     "/myangularapp/icons/icon-512x512.png": "0a3b7204243c78ef994c290ed8d9778bb82e2626",
     "/myangularapp/icons/icon-72x72.png": "2db6d80bc25a6d8a0a0afb04ccf512b3aff56727",
     "/myangularapp/icons/icon-96x96.png": "28f2b5cc8d86ebd8475c48a198d5429817f781b2",
-    "/myangularapp/index.html": "e8d18687e422f66f0f95140e1328c0c9e0e2b002",
-    "/myangularapp/main-5HRYXHMU.js": "21994d35abb58627d1277ac7f358aae43cc66c64",
+    "/myangularapp/index.html": "fe4f22aa26b235a69ecd78465e4d168b331cc67c",
+    "/myangularapp/main-RVENLG3I.js": "2288210a85cff49c684ba0e9d6d6e6889aa28715",
     "/myangularapp/manifest.webmanifest": "7e2941fdc7671ddb5b87b2e5ed48c3b9ad0eaf99",
     "/myangularapp/media/primeicons-4GST5W3O.woff2": "837c1279b6af9d297f34fdb43e6fcc9206a79f32",
     "/myangularapp/media/primeicons-DHQU4SEP.svg": "a07ae39027c1a780b42fd82fad7575c2924d9d28",
