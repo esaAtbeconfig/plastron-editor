@@ -33,6 +33,7 @@ export class PositionsComponent extends BaseFormComponent<Position[]> {
     const index = this.item.indexOf(position);
     if (index > -1) {
       this.item.splice(index, 1);
+      this.handleChange();
     }
   }
 }
