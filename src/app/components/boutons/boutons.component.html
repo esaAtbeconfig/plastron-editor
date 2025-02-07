@@ -1,4 +1,4 @@
-<p-card header="Fixations">
+<p-card header="Boutons">
        <div class="flex gap-4 flex-wrap">
               <p-floatLabel variant="on">
                      <label for="type">Type</label>
@@ -20,13 +20,8 @@
                             id="description" />
               </p-floatLabel>
 
-              <app-fixations-dimensions [value]="item.dimensions"
-                                       (valueChange)="item.dimensions=$event;handleChange()"
-              ></app-fixations-dimensions>
-
               <app-positions [value]="item.positions"
-                             (valueChange)="item.positions= $event;handleChange()"
+                             (valueChange)="item.positions=$event;handleChange()"
               ></app-positions>
-
        </div>
 </p-card>

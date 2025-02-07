@@ -1,24 +1,68 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
 <div class="flex flex-col gap-4">
-    <app-entete [value]="plastron.entete"
-                (valueChange)="plastron.entete=$event;handleChange()"
+    <app-entete [value]="commande.entete"
+                (valueChange)="commande.entete=$event;handleChange()"
                 ></app-entete>
 
-    <app-dimensions [value]="plastron.dimensions"
-                    (valueChange)="plastron.dimensions=$event;handleChange()"
-                    ></app-dimensions>
+    <app-plastron [value]="commande.plastron"
+                    (valueChange)="commande.plastron=$event;handleChange()"
+                    ></app-plastron>
 
-    <app-fixations [value]="plastron.fixations"
-                   (valueChange)="plastron.fixations=$event;handleChange()"
+    <app-fixations [value]="commande.fixations"
+                   (valueChange)="commande.fixations=$event;handleChange()"
                    ></app-fixations>
 
+    <app-generic-item [value]="commande.afficheur"
+                      [label]="'Afficheur'"
+                      (valueChange)="commande.afficheur=$event;handleChange()">
+                      </app-generic-item>
+
+    <app-generic-item [value]="commande.plaque_signaletique"
+                      [label]="'Plaque signalétique'"
+                      (valueChange)="commande.plaque_signaletique=$event;handleChange()">
+                      </app-generic-item>
+
+    <app-generic-item [value]="commande.haut_parleur"
+                      [label]="'Haut parleur'"
+                      (valueChange)="commande.haut_parleur=$event;handleChange()">
+                      </app-generic-item>
+
+    <app-generic-item [value]="commande.phonie"
+                      [label]="'Phonie'"
+                      (valueChange)="commande.phonie=$event;handleChange()">
+                      </app-generic-item>
+
+    <app-generic-item [value]="commande.eclairage_secouru"
+                      [label]="'Éclairage secouru'"
+                      (valueChange)="commande.eclairage_secouru=$event;handleChange()">
+                      </app-generic-item>
+
+    <app-generic-item [value]="commande.logo_plastron"
+                      [label]="'Logo plastron'"
+                      (valueChange)="commande.logo_plastron=$event;handleChange()">
+                      </app-generic-item>
+
+    <app-generic-item [value]="commande.aeration"
+                      [label]="'Aération'"
+                      (valueChange)="commande.aeration=$event;handleChange()">
+                      </app-generic-item>
+
+    <app-generic-item [value]="commande.goujon_masse"
+                      [label]="'Goujon masse'"
+                      (valueChange)="commande.goujon_masse=$event;handleChange()">
+                      </app-generic-item>
+
+    <app-gravure [value]="commande.gravure"
+                 (valueChange)="commande.gravure=$event;handleChange()">
+                 </app-gravure>
+
+    <app-boutons [value]="commande.boutons"
+                 (valueChange)="commande.boutons=$event;handleChange()">
+                 </app-boutons>
 
 </div>
 <div class="flex flex-col gap-4">
-<app-positions [value]="plastron.fixations.positions"
-                   (valueChange)="plastron.fixations.positions= $event;handleChange()"
-                   ></app-positions>
     <p-card class="">
         <ng-template #header>
             <div class="flex items-center justify-between p-4">

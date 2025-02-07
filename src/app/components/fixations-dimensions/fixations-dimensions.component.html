@@ -1,0 +1,63 @@
+<p-card header="Dimensions">
+       <div class="flex gap-4 flex-wrap">
+              <p-floatLabel variant="on">
+                     <label for="Taille">Taille</label>
+                     <input type="text"
+                            pInputText
+                            [ngModel]="item.taille"
+                            (ngModelChange)="item.taille=$event;handleChange()"
+                            title="Taille"
+                            id="taille" />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="diametre_int">Diamètre int.</label>
+                     <p-inputnumber
+                     [ngModel]="item.diametre_int"
+                     (ngModelChange)="item.diametre_int=$event;handleChange()"
+                     id="diametre_int"
+                     title="Diametre_int"
+                     />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="diametre_ext">Dimaètre ext.</label>
+                     <p-inputnumber
+                            [ngModel]="item.diametre_ext"
+                            (ngModelChange)="item.diametre_ext=$event;handleChange()"
+                            id="diametre_ext"
+                            title="Diametre_ext"
+                     />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="angle">Angle</label>
+                     <p-inputnumber
+                            [ngModel]="item.angle"
+                            (ngModelChange)="item.angle=$event;handleChange()"
+                            id="angle"
+                            title="angle"
+                     />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="diametre">Diamètre</label>
+                     <p-inputnumber
+                            [ngModel]="item.diametre"
+                            (ngModelChange)="item.diametre=$event;handleChange()"
+                            id="diametre"
+                            title="diametre"
+                     />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="longueur">Longueur</label>
+                     <p-inputnumber
+                            [ngModel]="item.longueur"
+                            (ngModelChange)="item.longueur=$event;handleChange()"
+                            id="longueur"
+                            title="longueur"
+                     />
+              </p-floatLabel>
+       </div>
+</p-card>

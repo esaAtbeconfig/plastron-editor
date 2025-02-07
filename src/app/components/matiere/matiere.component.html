@@ -1,0 +1,33 @@
+<p-card header="Matière">
+       <div class="flex gap-4 flex-wrap">
+              <p-floatLabel variant="on">
+                     <label for="type">Type</label>
+                     <input type="text"
+                            pInputText
+                            [ngModel]="item.type"
+                            (ngModelChange)="item.type=$event;handleChange()"
+                            title="Type"
+                            id="type"/>
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="finition">Finition</label>
+                     <input type="text"
+                            pInputText
+                            [ngModel]="item.finition"
+                            (ngModelChange)="item.finition=$event;handleChange()"
+                            id="finition"
+                            title="finition" />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="couleur">Couleur</label>
+                     <input type="text"
+                            id="couleur"
+                            pInputText
+                            [ngModel]="item.couleur"
+                            (ngModelChange)="item.couleur=$event;handleChange()"
+                            title="couleur" />
+              </p-floatLabel>
+       </div>
+</p-card>
