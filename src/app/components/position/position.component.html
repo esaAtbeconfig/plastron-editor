@@ -1,0 +1,23 @@
+<p-card header="Position">
+       <div class="flex gap-4 flex-wrap">
+              <p-floatLabel variant="on">
+                     <label for="x">X</label>
+                     <p-inputnumber
+                     [ngModel]="item.x"
+                     (ngModelChange)="item.x=$event;handleChange()"
+                     id="x"
+                     title="X"
+                     />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="y">Y</label>
+                     <p-inputnumber
+                     [ngModel]="item.y"
+                     (ngModelChange)="item.y=$event;handleChange()"
+                     id="y"
+                     title="Y"
+                     />
+              </p-floatLabel>
+       </div>
+</p-card>

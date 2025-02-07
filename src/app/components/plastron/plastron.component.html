@@ -1,4 +1,4 @@
-<p-card header="Fixations">
+<p-card header="Plastron">
        <div class="flex gap-4 flex-wrap">
               <p-floatLabel variant="on">
                      <label for="type">Type</label>
@@ -7,7 +7,7 @@
                             [ngModel]="item.type"
                             (ngModelChange)="item.type=$event;handleChange()"
                             title="Type"
-                            id="type" />
+                            id="type"/>
               </p-floatLabel>
 
               <p-floatLabel variant="on">
@@ -16,17 +16,16 @@
                             pInputText
                             [ngModel]="item.description"
                             (ngModelChange)="item.description=$event;handleChange()"
-                            title="Description"
-                            id="description" />
+                            id="description"
+                            title="Description" />
               </p-floatLabel>
 
-              <app-fixations-dimensions [value]="item.dimensions"
+              <app-plastron-dimensions [value]="item.dimensions"
                                        (valueChange)="item.dimensions=$event;handleChange()"
-              ></app-fixations-dimensions>
+              ></app-plastron-dimensions>
 
-              <app-positions [value]="item.positions"
-                             (valueChange)="item.positions= $event;handleChange()"
-              ></app-positions>
-
+              <app-matiere [value]="item.matiere"
+                           (valueChange)="item.matiere=$event;handleChange()"
+              ></app-matiere>
        </div>
 </p-card>

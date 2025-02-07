@@ -1,8 +1,7 @@
 export interface Entete {
-  description: string;
   id: string;
   production: string;
   reference: string;
-  type: string;
+  path: string;
   version: string;
 }

@@ -1,9 +1,9 @@
-import { Dimensions } from './dimension';
-import { Entete } from './entete';
-import { Fixations } from './fixation';
+import { Matiere } from './matiere';
+import { PlastronDimensions } from './plastron-dimensions';
 
 export interface Plastron {
-  entete: Entete;
-  dimensions: Dimensions;
-  fixations: Fixations;
+  type: string;
+  description: string;
+  dimensions: PlastronDimensions;
+  matiere: Matiere;
 }

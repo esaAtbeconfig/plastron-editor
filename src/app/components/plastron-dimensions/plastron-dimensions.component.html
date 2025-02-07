@@ -1,0 +1,53 @@
+<p-card header="Dimensions">
+       <div class="flex gap-4 flex-wrap">
+              <p-floatLabel variant="on">
+                     <label for="hauteur">Hauteur</label>
+                     <p-inputnumber
+                     [ngModel]="item.hauteur"
+                     (ngModelChange)="item.hauteur=$event;handleChange()"
+                     id="hauteur"
+                     title="hauteur"
+                     />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="largeur">Largeur</label>
+                     <p-inputnumber
+                     [ngModel]="item.largeur"
+                     (ngModelChange)="item.largeur=$event;handleChange()"
+                     id="largeur"
+                     title="largeur"
+                     />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="epaisseur">Epaisseur</label>
+                     <p-inputnumber
+                            [ngModel]="item.epaisseur"
+                            (ngModelChange)="item.epaisseur=$event;handleChange()"
+                            id="epaisseur"
+                            title="Epaisseur"
+                     />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="profondeur">Profondeur</label>
+                     <p-inputnumber
+                            [ngModel]="item.profondeur"
+                            (ngModelChange)="item.profondeur=$event;handleChange()"
+                            id="profondeur"
+                            title="Profondeur"
+                     />
+              </p-floatLabel>
+
+              <p-floatLabel variant="on">
+                     <label for="contrepli">Contrepli</label>
+                     <p-inputnumber
+                            [ngModel]="item.contrepli"
+                            (ngModelChange)="item.contrepli=$event;handleChange()"
+                            id="contrepli"
+                            title="Contrepli"
+                     />
+              </p-floatLabel>
+       </div>
+</p-card>
