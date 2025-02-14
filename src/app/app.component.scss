@@ -1,3 +1,10 @@
 main{
     height:calc(100vh - 7.5rem);overflow-y: scroll;
 }
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.75rem;
+}

@@ -20,7 +20,10 @@
       >Editeur de plastron</span
     >
   </div>
-  <div>
+  <div class="buttons-container">
+    @if (debug) {
+      <p-button (onClick)="testApi()">Test API</p-button>
+    }
     @if (loginDisplay) {
       <p-button (onClick)="logout()" icon="pi pi-sign-out"></p-button>
     } @else {
@@ -32,7 +35,6 @@
   @if (loginDisplay) {
     <app-plastron-editor [(value)]="commande"></app-plastron-editor>
   }
-  <p-button (onClick)="testApi()">Test API</p-button>
 </main>
 <footer
   class="flex items-center gap-4 h-10 fixed w-full bottom-0 bg-gray-500 p-4"

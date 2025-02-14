@@ -31,6 +31,7 @@ import { MSAL_GUARD_CONFIG, MsalBroadcastService, MsalGuardConfiguration, MsalSe
 import { AuthenticationResult, EventMessage, EventType, InteractionStatus, PopupRequest, RedirectRequest } from '@azure/msal-browser';
 import { Subject, filter, lastValueFrom, takeUntil } from 'rxjs';
 import { QuestionHintsService } from './services/question-hints.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   imports: [
@@ -104,6 +105,7 @@ export class AppComponent {
     } as Boutons
   } as Commande;
 
+  debug = false;
   private mode: 'light' | 'dark' = 'light';
 
   /*
@@ -118,7 +120,7 @@ export class AppComponent {
     private msalBroadcastService: MsalBroadcastService,
     private questionHintsService: QuestionHintsService
   ){
-
+    this.debug = environment.debug;
   }
 
   async testApi() {
@@ -129,7 +131,9 @@ export class AppComponent {
   ngOnInit(): void {
     this.authService.handleRedirectObservable().subscribe();
 
-    this.authService.instance.enableAccountStorageEvents(); // Optional - This will enable ACCOUNT_ADDED and ACCOUNT_REMOVED events emitted when a user logs in or out of another tab or window
+    // Optional - This will enable ACCOUNT_ADDED and ACCOUNT_REMOVED events emitted when a user logs in or out of another tab or window
+    this.authService.instance.enableAccountStorageEvents();
+
     this.msalBroadcastService.msalSubject$
       .pipe(
         filter(
