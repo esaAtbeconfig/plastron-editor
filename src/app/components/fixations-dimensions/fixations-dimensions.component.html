@@ -13,6 +13,7 @@
               <p-floatLabel variant="on">
                      <label for="diametre_int">Diamètre int.</label>
                      <p-inputnumber
+                     [minFractionDigits]="2"
                      [ngModel]="item.diametre_int"
                      (ngModelChange)="item.diametre_int=$event;handleChange()"
                      id="diametre_int"
@@ -23,6 +24,7 @@
               <p-floatLabel variant="on">
                      <label for="diametre_ext">Dimaètre ext.</label>
                      <p-inputnumber
+                            [minFractionDigits]="2"
                             [ngModel]="item.diametre_ext"
                             (ngModelChange)="item.diametre_ext=$event;handleChange()"
                             id="diametre_ext"
@@ -33,6 +35,7 @@
               <p-floatLabel variant="on">
                      <label for="angle">Angle</label>
                      <p-inputnumber
+                            [minFractionDigits]="2"
                             [ngModel]="item.angle"
                             (ngModelChange)="item.angle=$event;handleChange()"
                             id="angle"
@@ -43,6 +46,7 @@
               <p-floatLabel variant="on">
                      <label for="diametre">Diamètre</label>
                      <p-inputnumber
+                            [minFractionDigits]="2"
                             [ngModel]="item.diametre"
                             (ngModelChange)="item.diametre=$event;handleChange()"
                             id="diametre"
@@ -53,6 +57,7 @@
               <p-floatLabel variant="on">
                      <label for="longueur">Longueur</label>
                      <p-inputnumber
+                            [minFractionDigits]="2"
                             [ngModel]="item.longueur"
                             (ngModelChange)="item.longueur=$event;handleChange()"
                             id="longueur"
