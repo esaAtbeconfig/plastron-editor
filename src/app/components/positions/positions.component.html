@@ -19,13 +19,15 @@
             <div class="flex flex-col gap-2">
                 <p-floatLabel variant="on">
                     <label for="x">X</label>
-                    <p-inputnumber [ngModel]="position.x"
+                    <p-inputnumber [minFractionDigits]="2"
+                                   [ngModel]="position.x"
                                    (ngModelChange)="position.x=$event;handleChange()"
                                    id="x"></p-inputnumber>
                 </p-floatLabel>
                 <p-floatLabel variant="on">
                     <label for="y">Y</label>
-                    <p-inputnumber [ngModel]="position.y"
+                    <p-inputnumber [minFractionDigits]="2"
+                                   [ngModel]="position.y"
                                    (ngModelChange)="position.y=$event;handleChange()"
                                    id="y"></p-inputnumber>
                 </p-floatLabel>

@@ -3,6 +3,7 @@
               <p-floatLabel variant="on">
                      <label for="x">X</label>
                      <p-inputnumber
+                     [minFractionDigits]="2"
                      [ngModel]="item.x"
                      (ngModelChange)="item.x=$event;handleChange()"
                      id="x"
@@ -13,6 +14,7 @@
               <p-floatLabel variant="on">
                      <label for="y">Y</label>
                      <p-inputnumber
+                     [minFractionDigits]="2"
                      [ngModel]="item.y"
                      (ngModelChange)="item.y=$event;handleChange()"
                      id="y"
