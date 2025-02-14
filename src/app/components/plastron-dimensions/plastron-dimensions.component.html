@@ -3,6 +3,7 @@
               <p-floatLabel variant="on">
                      <label for="hauteur">Hauteur</label>
                      <p-inputnumber
+                     [minFractionDigits]="2"
                      [ngModel]="item.hauteur"
                      (ngModelChange)="item.hauteur=$event;handleChange()"
                      id="hauteur"
@@ -13,6 +14,7 @@
               <p-floatLabel variant="on">
                      <label for="largeur">Largeur</label>
                      <p-inputnumber
+                     [minFractionDigits]="2"
                      [ngModel]="item.largeur"
                      (ngModelChange)="item.largeur=$event;handleChange()"
                      id="largeur"
@@ -23,6 +25,7 @@
               <p-floatLabel variant="on">
                      <label for="epaisseur">Epaisseur</label>
                      <p-inputnumber
+                            [minFractionDigits]="2"
                             [ngModel]="item.epaisseur"
                             (ngModelChange)="item.epaisseur=$event;handleChange()"
                             id="epaisseur"
@@ -33,6 +36,7 @@
               <p-floatLabel variant="on">
                      <label for="profondeur">Profondeur</label>
                      <p-inputnumber
+                            [minFractionDigits]="2"
                             [ngModel]="item.profondeur"
                             (ngModelChange)="item.profondeur=$event;handleChange()"
                             id="profondeur"
@@ -43,6 +47,7 @@
               <p-floatLabel variant="on">
                      <label for="contrepli">Contrepli</label>
                      <p-inputnumber
+                            [minFractionDigits]="2"
                             [ngModel]="item.contrepli"
                             (ngModelChange)="item.contrepli=$event;handleChange()"
                             id="contrepli"
