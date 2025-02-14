@@ -10,6 +10,7 @@ import { IftaLabelModule } from 'primeng/iftalabel';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
 import { MessageService } from 'primeng/api';
+import { TabsModule } from 'primeng/tabs';
 import { ToastModule } from 'primeng/toast';
 import { TooltipModule } from 'primeng/tooltip';
 import { toXML } from 'to-xml';
@@ -35,6 +36,7 @@ import { GravureComponent } from '../gravure/gravure.component';
     GravureComponent,
     BoutonsComponent,
     PlastronComponent,
+    TabsModule,
     ToastModule,
     TooltipModule,
     EnteteComponent,
