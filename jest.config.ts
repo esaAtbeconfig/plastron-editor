@@ -1,3 +1,5 @@
+import * as structuredClone from '@ungap/structured-clone'; // can be written as import { structuredClone } from '@ungap/structured-clone';  if esModuleInterop flag is used
+
 export default {
   displayName: 'myangularapp',
   preset: './jest.preset.js',
@@ -22,4 +24,7 @@ export default {
     '<rootDir>/src/**/__tests__/**/*.[jt]s?(x)',
     '<rootDir>/src/**/*(*.)@(spec|test).[jt]s?(x)',
   ],
+  globals: {
+    structuredClone: structuredClone.default, // 'structuredClone' is a default export so I access it via .default
+  },
 };
