@@ -22,13 +22,25 @@ import { LogoPlastron } from './models/logo-plastron';
 import { Aeration } from './models/aeration';
 import { GoujonMasse } from './models/goujon-masse';
 import { Gravure } from './models/gravure';
-import { Boutons } from './models/boutons';
 import { Position } from './models/position';
 import { PlastronDimensions } from './models/plastron-dimensions';
 import { Matiere } from './models/matiere';
+import { Bouton } from './models/bouton';
 import { FixationsDimensions } from './models/fixations-dimensions';
-import { MSAL_GUARD_CONFIG, MsalBroadcastService, MsalGuardConfiguration, MsalService } from '@azure/msal-angular';
-import { AuthenticationResult, EventMessage, EventType, InteractionStatus, PopupRequest, RedirectRequest } from '@azure/msal-browser';
+import {
+  MSAL_GUARD_CONFIG,
+  MsalBroadcastService,
+  MsalGuardConfiguration,
+  MsalService,
+} from '@azure/msal-angular';
+import {
+  AuthenticationResult,
+  EventMessage,
+  EventType,
+  InteractionStatus,
+  PopupRequest,
+  RedirectRequest,
+} from '@azure/msal-browser';
 import { Subject, filter, lastValueFrom, takeUntil } from 'rxjs';
 import { QuestionHintsService } from './services/question-hints.service';
 import { environment } from 'src/environments/environment';
@@ -59,50 +71,48 @@ export class AppComponent {
       production: '',
       reference: '',
       path: '',
-      version: ''
+      version: '',
     } as Entete,
     plastron: {
       type: '',
       description: '',
       dimensions: {} as PlastronDimensions,
-      matiere: {} as Matiere
+      matiere: {} as Matiere,
     } as Plastron,
     fixations: {
       type: '',
       description: '',
       dimensions: {} as FixationsDimensions,
-      positions: [] as Position[]
+      positions: { position: [] as Position[] },
     } as Fixations,
     afficheur: {
-      position: {} as Position
+      position: {} as Position,
     } as Afficheur,
     plaque_signaletique: {
-      position: {} as Position
+      position: {} as Position,
     } as PlaqueSignaletique,
     haut_parleur: {
-      position: {} as Position
+      position: {} as Position,
     } as HautParleur,
     phonie: {
-      position: {} as Position
+      position: {} as Position,
     } as Phonie,
     eclairage_secouru: {
-      position: {} as Position
+      position: {} as Position,
     } as EclairageSecouru,
     logo_plastron: {
-      position: {} as Position
+      position: {} as Position,
     } as LogoPlastron,
     aeration: {
-      position: {} as Position
+      position: {} as Position,
     } as Aeration,
     goujon_masse: {
-      position: {} as Position
+      position: {} as Position,
     } as GoujonMasse,
     gravure: {
-      position: {} as Position
+      position: {} as Position,
     } as Gravure,
-    boutons: {
-      positions: [] as Position[]
-    } as Boutons
+    boutons: { button: [] as Bouton[] },
   } as Commande;
 
   debug = false;
@@ -119,12 +129,14 @@ export class AppComponent {
     private authService: MsalService,
     private msalBroadcastService: MsalBroadcastService,
     private questionHintsService: QuestionHintsService
-  ){
+  ) {
     this.debug = environment.debug;
   }
 
   async testApi() {
-    const res = await lastValueFrom(this.questionHintsService.getByQuestionId('entete.reference'));
+    const res = await lastValueFrom(
+      this.questionHintsService.getByQuestionId('entete.reference')
+    );
     console.log(res);
   }
 

@@ -5,5 +5,5 @@ export interface Fixations {
   type: string;
   description: string;
   dimensions: FixationsDimensions;
-  positions: Position[];
+  positions: { position: Position[] };
 }
