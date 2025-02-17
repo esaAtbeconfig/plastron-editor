@@ -1,27 +1,59 @@
-<p-card header="Boutons">
-       <div class="flex gap-4 flex-wrap">
-              <p-floatLabel variant="on">
-                     <label for="type">Type</label>
-                     <input type="text"
-                            pInputText
-                            [ngModel]="item.type"
-                            (ngModelChange)="item.type=$event;handleChange()"
-                            title="Type"
-                            id="type" />
-              </p-floatLabel>
+<p-card>
+  <ng-template #header>
+    <div class="flex items-center justify-between p-4">
+      <span class="p-card-title">Boutons</span>
+      <p-button
+        pTooltip="Ajouter un bouton"
+        tooltipPosition="left"
+        icon="pi pi-plus"
+        (onClick)="handleAddBouton()"
+      ></p-button>
+    </div>
+  </ng-template>
 
-              <p-floatLabel variant="on">
-                     <label for="description">Description</label>
-                     <input type="text"
-                            pInputText
-                            [ngModel]="item.description"
-                            (ngModelChange)="item.description=$event;handleChange()"
-                            title="Description"
-                            id="description" />
-              </p-floatLabel>
+  <div class="flex flex-row flex-wrap gap-4 overflow-y-auto">
+    <p-card *ngFor="let bouton of item">
+      <ng-template #header>
+        <div class="flex items-center justify-between pl-4">
+          <span class="text-xl">Bouton</span
+          ><p-button
+            (onClick)="handleRemoveBouton(bouton)"
+            icon="pi pi-trash"
+            pTooltip="Supprimer"
+          ></p-button>
+        </div>
+      </ng-template>
 
-              <app-positions [value]="item.positions"
-                             (valueChange)="item.positions=$event;handleChange()"
-              ></app-positions>
-       </div>
+      <div class="flex flex-col gap-2">
+        <p-floatLabel variant="on">
+          <label for="type">Type</label>
+          <input
+            type="text"
+            pInputText
+            [ngModel]="bouton.type"
+            (ngModelChange)="bouton.type = $event; handleChange()"
+            title="Type"
+            id="type"
+          />
+        </p-floatLabel>
+
+        <p-floatLabel variant="on">
+          <label for="description">Description</label>
+          <input
+            type="text"
+            pInputText
+            [ngModel]="bouton.description"
+            (ngModelChange)="bouton.description = $event; handleChange()"
+            title="Description"
+            id="description"
+          />
+        </p-floatLabel>
+
+        <app-positions
+          [value]="bouton.positions.position"
+          (valueChange)="bouton.positions.position = $event; handleChange()"
+        ></app-positions>
+      </div>
+    </p-card>
+  </div>
 </p-card>

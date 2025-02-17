@@ -10,11 +10,13 @@ import { InputIconModule } from 'primeng/inputicon';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
 import { PositionsComponent } from '../positions/positions.component';
-import { Boutons } from 'src/app/models/boutons';
+import { Bouton } from 'src/app/models/bouton';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-boutons',
   imports: [
+    ButtonModule,
     CommonModule,
     CardModule,
     IftaLabelModule,
@@ -29,4 +31,21 @@ import { Boutons } from 'src/app/models/boutons';
   templateUrl: './boutons.component.html',
   styleUrl: './boutons.component.css',
 })
-export class BoutonsComponent extends BaseFormComponent<Boutons> {}
+export class BoutonsComponent extends BaseFormComponent<Bouton[]> {
+  handleAddBouton() {
+    this.item.push({
+      description: '',
+      type: '',
+      positions: { position: [] },
+    } as Bouton);
+    this.handleChange();
+  }
+
+  handleRemoveBouton(bouton: Bouton) {
+    const index = this.item.indexOf(bouton);
+    if (index > -1) {
+      this.item.splice(index, 1);
+      this.handleChange();
+    }
+  }
+}

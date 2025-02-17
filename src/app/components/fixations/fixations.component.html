@@ -1,32 +1,37 @@
 <p-card header="Fixations">
-       <div class="flex gap-4 flex-wrap">
-              <p-floatLabel variant="on">
-                     <label for="type">Type</label>
-                     <input type="text"
-                            pInputText
-                            [ngModel]="item.type"
-                            (ngModelChange)="item.type=$event;handleChange()"
-                            title="Type"
-                            id="type" />
-              </p-floatLabel>
+  <div class="flex gap-4 flex-wrap">
+    <p-floatLabel variant="on">
+      <label for="type">Type</label>
+      <input
+        type="text"
+        pInputText
+        [ngModel]="item.type"
+        (ngModelChange)="item.type = $event; handleChange()"
+        title="Type"
+        id="type"
+      />
+    </p-floatLabel>
 
-              <p-floatLabel variant="on">
-                     <label for="description">Description</label>
-                     <input type="text"
-                            pInputText
-                            [ngModel]="item.description"
-                            (ngModelChange)="item.description=$event;handleChange()"
-                            title="Description"
-                            id="description" />
-              </p-floatLabel>
+    <p-floatLabel variant="on">
+      <label for="description">Description</label>
+      <input
+        type="text"
+        pInputText
+        [ngModel]="item.description"
+        (ngModelChange)="item.description = $event; handleChange()"
+        title="Description"
+        id="description"
+      />
+    </p-floatLabel>
 
-              <app-fixations-dimensions [value]="item.dimensions"
-                                       (valueChange)="item.dimensions=$event;handleChange()"
-              ></app-fixations-dimensions>
+    <app-fixations-dimensions
+      [value]="item.dimensions"
+      (valueChange)="item.dimensions = $event; handleChange()"
+    ></app-fixations-dimensions>
 
-              <app-positions [value]="item.positions"
-                             (valueChange)="item.positions= $event;handleChange()"
-              ></app-positions>
-
-       </div>
+    <app-positions
+      [value]="item.positions.position"
+      (valueChange)="item.positions.position = $event; handleChange()"
+    ></app-positions>
+  </div>
 </p-card>

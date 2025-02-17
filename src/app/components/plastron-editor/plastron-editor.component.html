@@ -110,8 +110,8 @@
         </p-tabpanel>
         <p-tabpanel value="12">
           <app-boutons
-            [value]="commande.boutons"
-            (valueChange)="commande.boutons = $event; handleChange()"
+            [value]="commande.boutons.button"
+            (valueChange)="commande.boutons.button = $event; handleChange()"
           >
           </app-boutons>
         </p-tabpanel>
