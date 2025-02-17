@@ -14,8 +14,8 @@ export const msalConfig: Configuration = {
   auth: {
     clientId: 'e1c9d413-0fcf-4526-a24d-ec4a451b37b4', // 'Application (client) ID' of app registration in the Microsoft Entra admin center - this value is a GUID
     authority: 'https://login.microsoftonline.com/b1d7cd6a-bb81-454f-8d0b-00313e1eefd5', // Full directory URL, in the form of https://login.microsoftonline.com/<tenant>
-    redirectUri: '/', // Must be the same redirectUri as what was provided in your app registration.
-    postLogoutRedirectUri: '/', // Points to window.location.origin by default
+    redirectUri: '/plastron-editor/', // Must be the same redirectUri as what was provided in your app registration.
+    postLogoutRedirectUri: '/plastron-editor/', // Points to window.location.origin by default
   },
   cache: {
     cacheLocation: BrowserCacheLocation.LocalStorage, // Configures cache location. "sessionStorage" is more secure, but "localStorage" gives you SSO between tabs.
