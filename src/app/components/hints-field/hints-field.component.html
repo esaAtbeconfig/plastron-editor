@@ -24,12 +24,20 @@
 >
   <div class="flex hints-title">
     <span class="title-label">{{ label }}</span>
-    <p-button
-      pTooltip="Ajouter une valeur prédéfinie"
-      tooltipPosition="left"
-      icon="pi pi-plus"
-      (onClick)="handleAddQuestionHint()"
-    ></p-button>
+    <div class="flex gap-4">
+      <p-button
+        pTooltip="Coller les valeurs prédéfinies provenant du presse-papier"
+        tooltipPosition="left"
+        icon="pi pi-clipboard"
+        (onClick)="handlePasteFromClipboard()"
+      ></p-button>
+      <p-button
+        pTooltip="Ajouter une valeur prédéfinie"
+        tooltipPosition="left"
+        icon="pi pi-plus"
+        (onClick)="handleAddQuestionHint()"
+      ></p-button>
+    </div>
   </div>
   <div *ngFor="let hint of questionHints" class="flex items-center gap-4 mb-4">
     <input
@@ -37,6 +45,7 @@
       class="flex-auto"
       title="Valeur prédéfinie"
       [(ngModel)]="hint.value"
+      [id]="hint.id"
     />
     <p-button
       (onClick)="handleRemoveQuestionHint(hint)"
@@ -44,12 +53,14 @@
       pTooltip="Supprimer"
     ></p-button>
   </div>
-  <div class="flex justify-end gap-2">
-    <p-button
-      label="Cancel"
-      severity="secondary"
-      (click)="displayAddQuestionHints = false"
-    />
-    <p-button label="Save" (click)="handleSaveQuestionHints()" />
-  </div>
+  <ng-template #footer>
+    <div class="flex justify-end gap-2">
+      <p-button
+        label="Annuler"
+        severity="secondary"
+        (click)="displayAddQuestionHints = false"
+      />
+      <p-button label="Enregistrer" (click)="handleSaveQuestionHints()" />
+    </div>
+  </ng-template>
 </p-dialog>

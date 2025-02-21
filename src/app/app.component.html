@@ -22,7 +22,7 @@
   </div>
   <div class="buttons-container">
     @if (shortName) {
-      <p-button>{{shortName}}</p-button>
+      <p-avatar [label]="shortName" styleClass="mr-2" size="large"></p-avatar>
     }
     @if (loginDisplay) {
       <p-button (onClick)="logout()" icon="pi pi-sign-out"></p-button>

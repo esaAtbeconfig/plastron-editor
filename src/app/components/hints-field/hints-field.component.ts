@@ -1,7 +1,7 @@
 import { BaseFormComponent } from 'src/app/models/base-form-component';
 import { CardModule } from 'primeng/card';
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit, forwardRef } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DialogModule } from 'primeng/dialog';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { FormsModule } from '@angular/forms';
@@ -18,6 +18,8 @@ import { ButtonModule } from 'primeng/button';
 import { QuestionHints } from 'src/app/models/question-hints';
 import { SelectModule } from 'primeng/select';
 import { MessageService } from 'primeng/api';
+import { TooltipModule } from 'primeng/tooltip';
+import { v4 } from 'uuid';
 
 @Component({
   selector: 'app-hints-field',
@@ -36,6 +38,7 @@ import { MessageService } from 'primeng/api';
     InputIconModule,
     InputTextModule,
     SelectModule,
+    TooltipModule,
   ],
   templateUrl: './hints-field.component.html',
   styleUrl: './hints-field.component.scss',
@@ -56,7 +59,7 @@ export class HintsFieldComponent
 
   displayAddQuestionHints = false;
   hintsOptions: { label: string; value: string }[] = [];
-  questionHints: {value: string} [] = [];
+  questionHints: { id: string; value: string }[] = [];
 
   async ngOnInit(): Promise<void> {
     await this.loadQuestionHints();
@@ -71,27 +74,36 @@ export class HintsFieldComponent
       this.hintsOptions = questionHints.hints.map((x) => {
         return { label: x, value: x };
       });
+      this.hintsOptions.sort((a, b) => a.value.localeCompare(b.value));
       this.questionHints = questionHints.hints.map((x) => {
-        return { value: x };
+        return { id: v4(), value: x };
       });
+      this.questionHints.sort((a, b) => a.value.localeCompare(b.value));
     }
   }
 
-  handleAddQuestionHints() {
+  async handleAddQuestionHints() {
+    await this.loadQuestionHints();
     this.displayAddQuestionHints = true;
   }
 
   handleAddQuestionHint() {
-    this.questionHints.push({
+    const id = v4();
+    this.questionHints.unshift({
+      id,
       value: '',
     });
+
+    setTimeout(() => {
+      document.getElementById(id)?.focus();
+    }, 0);
   }
 
   async handleSaveQuestionHints() {
     const item = {
       questionId: this.questionId,
-      hints: this.questionHints.map(x => x.value)
-    } as QuestionHints
+      hints: this.questionHints.map((x) => x.value),
+    } as QuestionHints;
 
     const res = (await lastValueFrom(
       this.questionHintsService.save(item)
@@ -114,5 +126,19 @@ export class HintsFieldComponent
     if (index > -1) {
       this.questionHints.splice(index, 1);
     }
+  }
+
+  async handlePasteFromClipboard() {
+    const text = await navigator.clipboard.readText();
+    const cleanText = text.replaceAll('\r', '').replaceAll('\t', '\n');
+    const arrayValues = cleanText.split('\n').filter((x) => x);
+
+    arrayValues.forEach((value) => {
+      this.questionHints.push({
+        id: v4(),
+        value: value,
+      });
+    });
+    this.questionHints.sort((a, b) => a.value.localeCompare(b.value));
   }
 }

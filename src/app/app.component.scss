@@ -8,3 +8,10 @@ main{
     align-items: center;
     gap: 0.75rem;
 }
+
+p-avatar {
+    font-size: large;
+    font-weight: 500;
+    background-color: var(--p-button-primary-border-color);
+    color: white;
+}

@@ -1,3 +1,5 @@
+import { AvatarModule } from 'primeng/avatar';
+import { AvatarGroupModule } from 'primeng/avatargroup';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { Component, Inject } from '@angular/core';
@@ -47,6 +49,8 @@ import { environment } from 'src/environments/environment';
 
 @Component({
   imports: [
+    AvatarModule,
+    AvatarGroupModule,
     ButtonModule,
     CardModule,
     IconFieldModule,

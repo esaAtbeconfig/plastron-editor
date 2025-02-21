@@ -31,3 +31,8 @@ label {
 .p-select:not(.p-disabled).p-focus {
     outline-offset: unset !important;
 }
+
+.buttons-container > p-button > button {
+    width: var(--p-avatar-lg-width) !important;
+    height: var(--p-avatar-lg-width) !important;
+}

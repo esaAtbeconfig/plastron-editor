@@ -16,6 +16,7 @@ import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { DropdownModule } from 'primeng/dropdown';
 import { HintsFieldComponent } from '../hints-field/hints-field.component';
+import { TooltipModule } from 'primeng/tooltip';
 
 @Component({
   selector: 'app-boutons',
@@ -34,7 +35,8 @@ import { HintsFieldComponent } from '../hints-field/hints-field.component';
     InputTextModule,
     InputGroupModule,
     InputGroupAddonModule,
-    HintsFieldComponent
+    HintsFieldComponent,
+    TooltipModule
   ],
   templateUrl: './boutons.component.html',
   styleUrl: './boutons.component.css',
