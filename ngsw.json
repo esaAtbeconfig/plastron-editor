@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1740131065389,
+  "timestamp": 1740144444468,
   "index": "/plastron-editor/index.html",
   "assetGroups": [
     {
@@ -11,17 +11,17 @@
         "ignoreVary": true
       },
       "urls": [
-        "/plastron-editor/chunk-5UPT2FAQ.js",
-        "/plastron-editor/chunk-DSMXUHEW.js",
+        "/plastron-editor/chunk-B4AWCLWW.js",
         "/plastron-editor/chunk-UQZI6XAJ.js",
+        "/plastron-editor/chunk-VM7O32ZL.js",
         "/plastron-editor/chunk-X6YHEMIY.js",
         "/plastron-editor/chunk-ZY7WU73K.js",
         "/plastron-editor/favicon.ico",
         "/plastron-editor/index.html",
-        "/plastron-editor/main-EF3YZJ3X.js",
+        "/plastron-editor/main-BKH6OMAG.js",
         "/plastron-editor/manifest.webmanifest",
         "/plastron-editor/polyfills-FFHMD2TL.js",
-        "/plastron-editor/styles-WZ6MSYOV.css"
+        "/plastron-editor/styles-XPMS7CH6.css"
       ],
       "patterns": []
     },
@@ -51,9 +51,9 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/plastron-editor/chunk-5UPT2FAQ.js": "9238b43242a698d58a959e0fe6ca03e2db59c3c3",
-    "/plastron-editor/chunk-DSMXUHEW.js": "9d3c4348a09271ed4095cb3ea7bd49e9667cec0f",
+    "/plastron-editor/chunk-B4AWCLWW.js": "c2ca516514e33b8dfa98b20514633e597419b94c",
     "/plastron-editor/chunk-UQZI6XAJ.js": "66681849dd844bdf174db03dcbcaaeff50a052bd",
+    "/plastron-editor/chunk-VM7O32ZL.js": "e44f3762d6debc5ad9876b33b53dde18b75ff2a0",
     "/plastron-editor/chunk-X6YHEMIY.js": "7fed607141c14093608ded2a1d30014e989ba953",
     "/plastron-editor/chunk-ZY7WU73K.js": "ea91cdb7f8688931d27da89cd1df28abcda4780c",
     "/plastron-editor/favicon.ico": "4e23d0f9b6ddaf3c9ddef90dbaed2342941297b5",
@@ -65,15 +65,15 @@
     "/plastron-editor/icons/icon-512x512.png": "0a3b7204243c78ef994c290ed8d9778bb82e2626",
     "/plastron-editor/icons/icon-72x72.png": "2db6d80bc25a6d8a0a0afb04ccf512b3aff56727",
     "/plastron-editor/icons/icon-96x96.png": "28f2b5cc8d86ebd8475c48a198d5429817f781b2",
-    "/plastron-editor/index.html": "27227b3f3c38b78f9bd5559a7b83517e027b35f6",
-    "/plastron-editor/main-EF3YZJ3X.js": "08d190aa08e216ce7731b845370792a00e3b68cf",
+    "/plastron-editor/index.html": "28e5e5e6199f55b1b5177b6ffcae2612c49a1bb7",
+    "/plastron-editor/main-BKH6OMAG.js": "f4d0afbd449ece0e46c8e8f0db509a4d97a11f5a",
     "/plastron-editor/manifest.webmanifest": "7e2941fdc7671ddb5b87b2e5ed48c3b9ad0eaf99",
     "/plastron-editor/media/primeicons-4GST5W3O.woff2": "837c1279b6af9d297f34fdb43e6fcc9206a79f32",
     "/plastron-editor/media/primeicons-DHQU4SEP.svg": "a07ae39027c1a780b42fd82fad7575c2924d9d28",
     "/plastron-editor/media/primeicons-GEFHGEHP.ttf": "3b878ca7e88945a8ec25814810b95367d8977ae6",
     "/plastron-editor/media/primeicons-P53SE5CV.woff": "361e3af71bb4e515feead2f787348a92a5527158",
     "/plastron-editor/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "/plastron-editor/styles-WZ6MSYOV.css": "ae4fc12b3fe4b4b9c2ef36520efecb5a73394d9a"
+    "/plastron-editor/styles-XPMS7CH6.css": "ab20bbedde4d56f1c04dc0361aedb7a0ac13ff98"
   },
   "navigationUrls": [
     {
