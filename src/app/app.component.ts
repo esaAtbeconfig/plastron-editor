@@ -7,6 +7,7 @@ import { IconFieldModule } from 'primeng/iconfield';
 import { IftaLabelModule } from 'primeng/iftalabel';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { SidebarModule } from 'primeng/sidebar';
 import { MessageService } from 'primeng/api';
 import { PlastronEditorComponent } from './components/plastron-editor/plastron-editor.component';
 import { RouterModule } from '@angular/router';
@@ -43,8 +44,7 @@ import {
   PopupRequest,
   RedirectRequest,
 } from '@azure/msal-browser';
-import { Subject, filter, lastValueFrom, takeUntil } from 'rxjs';
-import { QuestionHintsService } from './services/question-hints.service';
+import { Subject, filter, takeUntil } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -59,6 +59,7 @@ import { environment } from 'src/environments/environment';
     InputNumberModule,
     PlastronEditorComponent,
     RouterModule,
+    SidebarModule,
     ToastModule,
   ],
   selector: 'app-root',
@@ -68,6 +69,8 @@ import { environment } from 'src/environments/environment';
 })
 export class AppComponent {
   title = 'myangularapp';
+
+  sidebarVisible = false;
 
   commande = {
     entete: {
@@ -123,8 +126,7 @@ export class AppComponent {
   constructor(
     @Inject(MSAL_GUARD_CONFIG) private msalGuardConfig: MsalGuardConfiguration,
     private authService: MsalService,
-    private msalBroadcastService: MsalBroadcastService,
-    private questionHintsService: QuestionHintsService
+    private msalBroadcastService: MsalBroadcastService
   ) {
     this.debug = environment.debug;
   }
