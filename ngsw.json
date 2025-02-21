@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1740144444468,
+  "timestamp": 1740145634213,
   "index": "/plastron-editor/index.html",
   "assetGroups": [
     {
@@ -18,7 +18,7 @@
         "/plastron-editor/chunk-ZY7WU73K.js",
         "/plastron-editor/favicon.ico",
         "/plastron-editor/index.html",
-        "/plastron-editor/main-BKH6OMAG.js",
+        "/plastron-editor/main-ERDEN6CZ.js",
         "/plastron-editor/manifest.webmanifest",
         "/plastron-editor/polyfills-FFHMD2TL.js",
         "/plastron-editor/styles-XPMS7CH6.css"
@@ -65,8 +65,8 @@
     "/plastron-editor/icons/icon-512x512.png": "0a3b7204243c78ef994c290ed8d9778bb82e2626",
     "/plastron-editor/icons/icon-72x72.png": "2db6d80bc25a6d8a0a0afb04ccf512b3aff56727",
     "/plastron-editor/icons/icon-96x96.png": "28f2b5cc8d86ebd8475c48a198d5429817f781b2",
-    "/plastron-editor/index.html": "28e5e5e6199f55b1b5177b6ffcae2612c49a1bb7",
-    "/plastron-editor/main-BKH6OMAG.js": "f4d0afbd449ece0e46c8e8f0db509a4d97a11f5a",
+    "/plastron-editor/index.html": "23a2384fe7cba7a92bb7d98a7a374bb309f2aa65",
+    "/plastron-editor/main-ERDEN6CZ.js": "85f90a3bd383c2f2e5c1dc91fa1117b1653c2713",
     "/plastron-editor/manifest.webmanifest": "7e2941fdc7671ddb5b87b2e5ed48c3b9ad0eaf99",
     "/plastron-editor/media/primeicons-4GST5W3O.woff2": "837c1279b6af9d297f34fdb43e6fcc9206a79f32",
     "/plastron-editor/media/primeicons-DHQU4SEP.svg": "a07ae39027c1a780b42fd82fad7575c2924d9d28",
