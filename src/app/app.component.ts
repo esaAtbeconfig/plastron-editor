@@ -67,21 +67,12 @@ export class AppComponent {
 
   commande = {
     entete: {
-      id: '',
-      production: '',
-      reference: '',
-      path: '',
-      version: '',
     } as Entete,
     plastron: {
-      type: '',
-      description: '',
       dimensions: {} as PlastronDimensions,
       matiere: {} as Matiere,
     } as Plastron,
     fixations: {
-      type: '',
-      description: '',
       dimensions: {} as FixationsDimensions,
       positions: { position: [] as Position[] },
     } as Fixations,
@@ -122,6 +113,7 @@ export class AppComponent {
     MSAL
   */
   loginDisplay = false;
+  shortName = '';
   private readonly _destroying$ = new Subject<void>();
 
   constructor(
@@ -131,13 +123,6 @@ export class AppComponent {
     private questionHintsService: QuestionHintsService
   ) {
     this.debug = environment.debug;
-  }
-
-  async testApi() {
-    const res = await lastValueFrom(
-      this.questionHintsService.getByQuestionId('entete.reference')
-    );
-    console.log(res);
   }
 
   ngOnInit(): void {
@@ -172,7 +157,15 @@ export class AppComponent {
       .subscribe(() => {
         this.setLoginDisplay();
         this.checkAndSetActiveAccount();
+        this.shortName = this.getShortName(this.authService.instance.getActiveAccount()?.name);
       });
+  }
+
+  getShortName(name: string | undefined) {
+    if (name)
+      return name.split(" ").map((n)=>n[0]).join("").toUpperCase();
+    else
+      return '';
   }
 
   setLoginDisplay() {

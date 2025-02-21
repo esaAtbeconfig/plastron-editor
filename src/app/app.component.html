@@ -21,8 +21,8 @@
     >
   </div>
   <div class="buttons-container">
-    @if (debug) {
-      <p-button (onClick)="testApi()">Test API</p-button>
+    @if (shortName) {
+      <p-button>{{shortName}}</p-button>
     }
     @if (loginDisplay) {
       <p-button (onClick)="logout()" icon="pi pi-sign-out"></p-button>

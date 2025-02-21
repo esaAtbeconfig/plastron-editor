@@ -12,6 +12,10 @@ import { InputTextModule } from 'primeng/inputtext';
 import { PositionsComponent } from '../positions/positions.component';
 import { Bouton } from 'src/app/models/bouton';
 import { ButtonModule } from 'primeng/button';
+import { InputGroupModule } from 'primeng/inputgroup';
+import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
+import { DropdownModule } from 'primeng/dropdown';
+import { HintsFieldComponent } from '../hints-field/hints-field.component';
 
 @Component({
   selector: 'app-boutons',
@@ -19,6 +23,7 @@ import { ButtonModule } from 'primeng/button';
     ButtonModule,
     CommonModule,
     CardModule,
+    DropdownModule,
     IftaLabelModule,
     FormsModule,
     FloatLabelModule,
@@ -27,6 +32,9 @@ import { ButtonModule } from 'primeng/button';
     IconFieldModule,
     InputIconModule,
     InputTextModule,
+    InputGroupModule,
+    InputGroupAddonModule,
+    HintsFieldComponent
   ],
   templateUrl: './boutons.component.html',
   styleUrl: './boutons.component.css',
@@ -34,10 +42,8 @@ import { ButtonModule } from 'primeng/button';
 export class BoutonsComponent extends BaseFormComponent<Bouton[]> {
   handleAddBouton() {
     this.item.push({
-      description: '',
-      type: '',
       positions: { position: [] },
-    } as Bouton);
+    } as any as Bouton);
     this.handleChange();
   }
 

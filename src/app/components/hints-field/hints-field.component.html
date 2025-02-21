@@ -1,0 +1,55 @@
+<p-inputGroup>
+  <p-inputGroupAddon>
+    <p-select
+      [options]="hintsOptions"
+      [placeholder]="label"
+      [showClear]="true"
+      [ngModel]="item"
+      (ngModelChange)="item = $event; handleChange()"
+      appendTo="body"
+      optionValue="value"
+      optionLabel="label"
+    />
+  </p-inputGroupAddon>
+  <p-inputGroupAddon>
+    <p-button (onClick)="handleAddQuestionHints()" icon="pi pi-plus"></p-button>
+  </p-inputGroupAddon>
+</p-inputGroup>
+
+<p-dialog
+  header="Valeurs prédéfinies"
+  [modal]="true"
+  [(visible)]="displayAddQuestionHints"
+  [style]="{ width: '25rem' }"
+>
+  <div class="flex hints-title">
+    <span class="title-label">{{ label }}</span>
+    <p-button
+      pTooltip="Ajouter une valeur prédéfinie"
+      tooltipPosition="left"
+      icon="pi pi-plus"
+      (onClick)="handleAddQuestionHint()"
+    ></p-button>
+  </div>
+  <div *ngFor="let hint of questionHints" class="flex items-center gap-4 mb-4">
+    <input
+      pInputText
+      class="flex-auto"
+      title="Valeur prédéfinie"
+      [(ngModel)]="hint.value"
+    />
+    <p-button
+      (onClick)="handleRemoveQuestionHint(hint)"
+      icon="pi pi-trash"
+      pTooltip="Supprimer"
+    ></p-button>
+  </div>
+  <div class="flex justify-end gap-2">
+    <p-button
+      label="Cancel"
+      severity="secondary"
+      (click)="displayAddQuestionHints = false"
+    />
+    <p-button label="Save" (click)="handleSaveQuestionHints()" />
+  </div>
+</p-dialog>

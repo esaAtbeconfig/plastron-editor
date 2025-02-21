@@ -9,6 +9,25 @@ label {
     z-index: 1;
 }
 .p-tablist-nav-button {
-    background-color: var(--p-button-primary-border-color) !important;
+    background-color:var(--p-button-primary-border-color) !important;
     color: white !important;
+    border-radius: 0.25rem !important;
+}
+.p-select-overlay {
+    width: 100%;
+}
+.p-select-label.p-placeholder {
+    font-weight: var(--p-floatlabel-font-weight) !important;
+}
+.p-card-title {
+    font-size: 1.1rem !important;
+}
+.p-card-content {
+    font-size: 0.9rem !important;
+}
+.p-inputtext {
+    font-size: unset !important;
+}
+.p-select:not(.p-disabled).p-focus {
+    outline-offset: unset !important;
 }

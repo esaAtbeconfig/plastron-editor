@@ -25,17 +25,13 @@
       </ng-template>
 
       <div class="flex flex-col gap-2">
-        <p-floatLabel variant="on">
-          <label for="type">Type</label>
-          <input
-            type="text"
-            pInputText
-            [ngModel]="bouton.type"
-            (ngModelChange)="bouton.type = $event; handleChange()"
-            title="Type"
-            id="type"
-          />
-        </p-floatLabel>
+        <app-hints-field
+          label="Type"
+          questionId="bouton.type"
+          [value]="bouton.type"
+          (valueChange)="bouton.type = $event; handleChange()"
+        >
+        </app-hints-field>
 
         <p-floatLabel variant="on">
           <label for="description">Description</label>

@@ -10,6 +10,7 @@ import { IftaLabelModule } from 'primeng/iftalabel';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
+import { HintsFieldComponent } from '../hints-field/hints-field.component';
 
 @Component({
   selector: 'app-entete',
@@ -23,6 +24,7 @@ import { InputTextModule } from 'primeng/inputtext';
     IconFieldModule,
     InputIconModule,
     InputTextModule,
+    HintsFieldComponent
   ],
   templateUrl: './entete.component.html',
   styleUrl: './entete.component.css',

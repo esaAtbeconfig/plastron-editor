@@ -1,16 +1,12 @@
 <p-card header="Fixations">
   <div class="flex gap-4 flex-wrap">
-    <p-floatLabel variant="on">
-      <label for="type">Type</label>
-      <input
-        type="text"
-        pInputText
-        [ngModel]="item.type"
-        (ngModelChange)="item.type = $event; handleChange()"
-        title="Type"
-        id="type"
-      />
-    </p-floatLabel>
+    <app-hints-field
+      label="Type"
+      questionId="fixations.type"
+      [value]="item.type"
+      (valueChange)="item.type = $event; handleChange()"
+    >
+    </app-hints-field>
 
     <p-floatLabel variant="on">
       <label for="description">Description</label>

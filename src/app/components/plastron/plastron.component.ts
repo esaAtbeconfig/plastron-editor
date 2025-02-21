@@ -12,6 +12,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { Plastron } from 'src/app/models/plastron';
 import { MatiereComponent } from '../matiere/matiere.component';
 import { PlastronDimensionsComponent } from '../plastron-dimensions/plastron-dimensions.component';
+import { HintsFieldComponent } from '../hints-field/hints-field.component';
 
 @Component({
   selector: 'app-plastron',
@@ -27,6 +28,7 @@ import { PlastronDimensionsComponent } from '../plastron-dimensions/plastron-dim
     IconFieldModule,
     InputIconModule,
     InputTextModule,
+    HintsFieldComponent
   ],
   templateUrl: './plastron.component.html',
   styleUrl: './plastron.component.css',

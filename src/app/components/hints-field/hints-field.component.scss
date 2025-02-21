@@ -1,0 +1,29 @@
+
+p-inputgroup {
+    width: auto;
+}
+
+p-inputgroupaddon {
+    padding: unset;
+
+    p-button {
+        height: 100%;
+    }
+}
+
+p-select {
+    border: unset;
+    width: 13rem !important;
+}
+
+.hints-title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+}
+
+.title-label {
+    font-size: 1rem;
+    font-weight: 500;
+}
