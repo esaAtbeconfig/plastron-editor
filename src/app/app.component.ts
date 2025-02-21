@@ -1,3 +1,5 @@
+import { AvatarModule } from 'primeng/avatar';
+import { AvatarGroupModule } from 'primeng/avatargroup';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { Component, Inject } from '@angular/core';
@@ -5,6 +7,7 @@ import { IconFieldModule } from 'primeng/iconfield';
 import { IftaLabelModule } from 'primeng/iftalabel';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { SidebarModule } from 'primeng/sidebar';
 import { MessageService } from 'primeng/api';
 import { PlastronEditorComponent } from './components/plastron-editor/plastron-editor.component';
 import { RouterModule } from '@angular/router';
@@ -41,12 +44,13 @@ import {
   PopupRequest,
   RedirectRequest,
 } from '@azure/msal-browser';
-import { Subject, filter, lastValueFrom, takeUntil } from 'rxjs';
-import { QuestionHintsService } from './services/question-hints.service';
+import { Subject, filter, takeUntil } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Component({
   imports: [
+    AvatarModule,
+    AvatarGroupModule,
     ButtonModule,
     CardModule,
     IconFieldModule,
@@ -55,6 +59,7 @@ import { environment } from 'src/environments/environment';
     InputNumberModule,
     PlastronEditorComponent,
     RouterModule,
+    SidebarModule,
     ToastModule,
   ],
   selector: 'app-root',
@@ -65,23 +70,16 @@ import { environment } from 'src/environments/environment';
 export class AppComponent {
   title = 'myangularapp';
 
+  sidebarVisible = false;
+
   commande = {
     entete: {
-      id: '',
-      production: '',
-      reference: '',
-      path: '',
-      version: '',
     } as Entete,
     plastron: {
-      type: '',
-      description: '',
       dimensions: {} as PlastronDimensions,
       matiere: {} as Matiere,
     } as Plastron,
     fixations: {
-      type: '',
-      description: '',
       dimensions: {} as FixationsDimensions,
       positions: { position: [] as Position[] },
     } as Fixations,
@@ -122,22 +120,15 @@ export class AppComponent {
     MSAL
   */
   loginDisplay = false;
+  shortName = '';
   private readonly _destroying$ = new Subject<void>();
 
   constructor(
     @Inject(MSAL_GUARD_CONFIG) private msalGuardConfig: MsalGuardConfiguration,
     private authService: MsalService,
-    private msalBroadcastService: MsalBroadcastService,
-    private questionHintsService: QuestionHintsService
+    private msalBroadcastService: MsalBroadcastService
   ) {
     this.debug = environment.debug;
-  }
-
-  async testApi() {
-    const res = await lastValueFrom(
-      this.questionHintsService.getByQuestionId('entete.reference')
-    );
-    console.log(res);
   }
 
   ngOnInit(): void {
@@ -172,7 +163,15 @@ export class AppComponent {
       .subscribe(() => {
         this.setLoginDisplay();
         this.checkAndSetActiveAccount();
+        this.shortName = this.getShortName(this.authService.instance.getActiveAccount()?.name);
       });
+  }
+
+  getShortName(name: string | undefined) {
+    if (name)
+      return name.split(" ").map((n)=>n[0]).join("").toUpperCase();
+    else
+      return '';
   }
 
   setLoginDisplay() {

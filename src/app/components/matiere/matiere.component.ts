@@ -10,6 +10,7 @@ import { InputIconModule } from 'primeng/inputicon';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
 import { Matiere } from 'src/app/models/matiere';
+import { HintsFieldComponent } from '../hints-field/hints-field.component';
 
 @Component({
   selector: 'app-matiere',
@@ -23,6 +24,7 @@ import { Matiere } from 'src/app/models/matiere';
     IconFieldModule,
     InputIconModule,
     InputTextModule,
+    HintsFieldComponent
   ],
   templateUrl: './matiere.component.html',
   styleUrl: './matiere.component.css',

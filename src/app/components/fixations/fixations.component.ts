@@ -12,6 +12,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
 import { FixationsDimensionsComponent } from '../fixations-dimensions/fixations-dimensions.component';
 import { PositionsComponent } from '../positions/positions.component';
+import { HintsFieldComponent } from '../hints-field/hints-field.component';
 
 @Component({
   selector: 'app-fixations',
@@ -27,6 +28,7 @@ import { PositionsComponent } from '../positions/positions.component';
     IconFieldModule,
     InputIconModule,
     InputTextModule,
+    HintsFieldComponent
   ],
   templateUrl: './fixations.component.html',
   styleUrl: './fixations.component.css',

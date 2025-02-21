@@ -1,33 +1,27 @@
 <p-card header="Matière">
-       <div class="flex gap-4 flex-wrap">
-              <p-floatLabel variant="on">
-                     <label for="type">Type</label>
-                     <input type="text"
-                            pInputText
-                            [ngModel]="item.type"
-                            (ngModelChange)="item.type=$event;handleChange()"
-                            title="Type"
-                            id="type"/>
-              </p-floatLabel>
+  <div class="flex gap-4 flex-wrap">
+    <app-hints-field
+      label="Type"
+      questionId="plastron.matiere.type"
+      [value]="item.type"
+      (valueChange)="item.type = $event; handleChange()"
+    >
+    </app-hints-field>
 
-              <p-floatLabel variant="on">
-                     <label for="finition">Finition</label>
-                     <input type="text"
-                            pInputText
-                            [ngModel]="item.finition"
-                            (ngModelChange)="item.finition=$event;handleChange()"
-                            id="finition"
-                            title="finition" />
-              </p-floatLabel>
+    <app-hints-field
+      label="Finition"
+      questionId="plastron.matiere.finition"
+      [value]="item.finition"
+      (valueChange)="item.finition = $event; handleChange()"
+    >
+    </app-hints-field>
 
-              <p-floatLabel variant="on">
-                     <label for="couleur">Couleur</label>
-                     <input type="text"
-                            id="couleur"
-                            pInputText
-                            [ngModel]="item.couleur"
-                            (ngModelChange)="item.couleur=$event;handleChange()"
-                            title="couleur" />
-              </p-floatLabel>
-       </div>
+    <app-hints-field
+      label="Couleur"
+      questionId="plastron.matiere.couleur"
+      [value]="item.couleur"
+      (valueChange)="item.couleur = $event; handleChange()"
+    >
+    </app-hints-field>
+  </div>
 </p-card>

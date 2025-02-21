@@ -39,6 +39,7 @@
           <app-generic-item
             [value]="commande.afficheur"
             [label]="'Afficheur'"
+            questionId="afficheur.type"
             (valueChange)="commande.afficheur = $event; handleChange()"
           >
           </app-generic-item>
@@ -47,6 +48,7 @@
           <app-generic-item
             [value]="commande.plaque_signaletique"
             [label]="'Plaque signalétique'"
+            questionId="plaque_signaletique.type"
             (valueChange)="
               commande.plaque_signaletique = $event; handleChange()
             "
@@ -57,6 +59,7 @@
           <app-generic-item
             [value]="commande.haut_parleur"
             [label]="'Haut parleur'"
+            questionId="haut_parleur.type"
             (valueChange)="commande.haut_parleur = $event; handleChange()"
           >
           </app-generic-item>
@@ -65,6 +68,7 @@
           <app-generic-item
             [value]="commande.phonie"
             [label]="'Phonie'"
+            questionId="phonie.type"
             (valueChange)="commande.phonie = $event; handleChange()"
           >
           </app-generic-item>
@@ -73,6 +77,7 @@
           <app-generic-item
             [value]="commande.eclairage_secouru"
             [label]="'Éclairage secouru'"
+            questionId="eclairage_secouru.type"
             (valueChange)="commande.eclairage_secouru = $event; handleChange()"
           >
           </app-generic-item>
@@ -81,6 +86,7 @@
           <app-generic-item
             [value]="commande.logo_plastron"
             [label]="'Logo plastron'"
+            questionId="logo_plastron.type"
             (valueChange)="commande.logo_plastron = $event; handleChange()"
           >
           </app-generic-item>
@@ -89,6 +95,7 @@
           <app-generic-item
             [value]="commande.aeration"
             [label]="'Aération'"
+            questionId="aeration.type"
             (valueChange)="commande.aeration = $event; handleChange()"
           >
           </app-generic-item>
@@ -97,6 +104,7 @@
           <app-generic-item
             [value]="commande.goujon_masse"
             [label]="'Goujon masse'"
+            questionId="goujon_masse.type"
             (valueChange)="commande.goujon_masse = $event; handleChange()"
           >
           </app-generic-item>
@@ -122,7 +130,7 @@
     <p-card class="">
       <ng-template #header>
         <div class="flex items-center justify-between p-4">
-          <span class="p-card-title">Xml</span>
+          <span class="p-card-title">XML</span>
           <p-button
             (onClick)="handleCopyToClipboard()"
             icon="pi pi-copy"

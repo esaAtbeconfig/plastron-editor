@@ -1,27 +1,27 @@
 <p-card [header]="label">
-       <div class="flex gap-4 flex-wrap">
-              <p-floatLabel variant="on">
-                     <label for="type">Type</label>
-                     <input type="text"
-                            pInputText
-                            [ngModel]="item.type"
-                            (ngModelChange)="item.type=$event;handleChange()"
-                            title="Type"
-                            id="type"/>
-              </p-floatLabel>
+  <div class="flex gap-4 flex-wrap">
+    <app-hints-field
+       label="Type"
+       [questionId]="questionId"
+       [value]="item.type"
+       (valueChange)="item.type = $event; handleChange()">
+    </app-hints-field>
 
-              <p-floatLabel variant="on">
-                     <label for="description">Description</label>
-                     <input type="text"
-                            pInputText
-                            [ngModel]="item.description"
-                            (ngModelChange)="item.description=$event;handleChange()"
-                            id="description"
-                            title="Description" />
-              </p-floatLabel>
+    <p-floatLabel variant="on">
+      <label for="description">Description</label>
+      <input
+        type="text"
+        pInputText
+        [ngModel]="item.description"
+        (ngModelChange)="item.description = $event; handleChange()"
+        id="description"
+        title="Description"
+      />
+    </p-floatLabel>
 
-              <app-position [value]="item.position"
-                            (valueChange)="item.position=$event;handleChange()"
-              ></app-position>
-       </div>
+    <app-position
+      [value]="item.position"
+      (valueChange)="item.position = $event; handleChange()"
+    ></app-position>
+  </div>
 </p-card>

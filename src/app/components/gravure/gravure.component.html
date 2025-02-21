@@ -1,37 +1,40 @@
 <p-card header="Gravure">
-       <div class="flex gap-4 flex-wrap">
-              <p-floatLabel variant="on">
-                     <label for="police">Police</label>
-                     <input type="text"
-                            pInputText
-                            [ngModel]="item.police"
-                            (ngModelChange)="item.police=$event;handleChange()"
-                            title="Police"
-                            id="police"/>
-              </p-floatLabel>
+  <div class="flex gap-4 flex-wrap">
+    <app-hints-field
+      label="Police"
+      questionId="gravure.police"
+      [value]="item.police"
+      (valueChange)="item.police = $event; handleChange()"
+    >
+    </app-hints-field>
 
-              <p-floatLabel variant="on">
-                     <label for="taille">Taille</label>
-                     <input type="text"
-                            pInputText
-                            [ngModel]="item.taille"
-                            (ngModelChange)="item.taille=$event;handleChange()"
-                            id="taille"
-                            title="Taille" />
-              </p-floatLabel>
+    <p-floatLabel variant="on">
+      <label for="taille">Taille</label>
+      <input
+        type="text"
+        pInputText
+        [ngModel]="item.taille"
+        (ngModelChange)="item.taille = $event; handleChange()"
+        id="taille"
+        title="Taille"
+      />
+    </p-floatLabel>
 
-              <p-floatLabel variant="on">
-                     <label for="description">Description</label>
-                     <input type="text"
-                            pInputText
-                            [ngModel]="item.description"
-                            (ngModelChange)="item.description=$event;handleChange()"
-                            id="description"
-                            title="Description" />
-              </p-floatLabel>
+    <p-floatLabel variant="on">
+      <label for="description">Description</label>
+      <input
+        type="text"
+        pInputText
+        [ngModel]="item.description"
+        (ngModelChange)="item.description = $event; handleChange()"
+        id="description"
+        title="Description"
+      />
+    </p-floatLabel>
 
-              <app-position [value]="item.position"
-                            (valueChange)="item.position=$event;handleChange()"
-              ></app-position>
-       </div>
+    <app-position
+      [value]="item.position"
+      (valueChange)="item.position = $event; handleChange()"
+    ></app-position>
+  </div>
 </p-card>

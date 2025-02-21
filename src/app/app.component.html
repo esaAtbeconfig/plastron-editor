@@ -4,6 +4,7 @@
   class="flex items-center justify-between flex-wrap bg-gray-200 sticky h-20 p-6"
 >
   <div class="flex items-center gap-4 h-10">
+    <p-button (onClick)="sidebarVisible = true" icon="pi pi-bars"></p-button>
     <svg
       width="2rem"
       height="2rem"
@@ -21,19 +22,18 @@
     >
   </div>
   <div class="buttons-container">
-    @if (debug) {
-      <p-button (onClick)="testApi()">Test API</p-button>
-    }
-    @if (loginDisplay) {
-      <p-button (onClick)="logout()" icon="pi pi-sign-out"></p-button>
+    @if (shortName) {
+    <p-avatar [label]="shortName" styleClass="mr-2" size="large"></p-avatar>
+    } @if (loginDisplay) {
+    <p-button (onClick)="logout()" icon="pi pi-sign-out"></p-button>
     } @else {
-      <p-button (onClick)="loginRedirect()" icon="pi pi-sign-in"></p-button>
+    <p-button (onClick)="loginRedirect()" icon="pi pi-sign-in"></p-button>
     }
   </div>
 </header>
 <main class="p-4">
   @if (loginDisplay) {
-    <app-plastron-editor [(value)]="commande"></app-plastron-editor>
+  <app-plastron-editor [(value)]="commande"></app-plastron-editor>
   }
 </main>
 <footer
@@ -48,4 +48,10 @@
     BeConfig
   </a>
 </footer>
+<p-sidebar [(visible)]="sidebarVisible" dismissible="false">
+  <ng-template pTemplate="header">
+    <span class="font-semibold text-xl">Éditeur de plastron</span>
+  </ng-template>
+  <p>Composer votre fichier XML à l'aide des différents onglets.</p>
+</p-sidebar>
 <p-toast></p-toast>

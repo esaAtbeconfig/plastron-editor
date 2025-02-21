@@ -12,21 +12,15 @@ export class QuestionHintsService {
 
   baseUri = `${environment.apiUrl}QuestionHints`;
 
-  getByQuestionId(questionId: string): Observable<string[]> {
-    return this.httpClient.get<string[]>(`${this.baseUri}/${questionId}`, {
-        responseType: 'text' as 'json',
-      });
-  }
-
-  get(item: QuestionHints): Observable<string[]> {
-    return this.httpClient.get<string[]>(`${this.baseUri}/${item.questionId}`, {
-      responseType: 'text' as 'json',
+  get(questionId: string): Observable<QuestionHints> {
+    return this.httpClient.get<QuestionHints>(`${this.baseUri}/${questionId}`, {
+      responseType: 'json',
     });
   }
 
-  save(item: QuestionHints): Observable<string> {
-    return this.httpClient.post<string>(`${this.baseUri}`, item, {
-      responseType: 'text' as 'json',
+  save(item: QuestionHints): Observable<QuestionHints> {
+    return this.httpClient.post<QuestionHints>(`${this.baseUri}`, item, {
+      responseType: 'json',
     });
   }
 }
