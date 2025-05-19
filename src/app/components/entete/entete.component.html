@@ -1,12 +1,16 @@
 <p-card header="Entête">
   <div class="flex gap-4 flex-wrap">
-    <app-hints-field
-      label="Référence"
-      questionId="entete.reference"
-      [value]="item.reference"
-      (valueChange)="item.reference = $event; handleChange()"
-    >
-    </app-hints-field>
+    <p-floatLabel variant="on">
+      <label for="reference">Référence</label>
+      <input
+        type="text"
+        pInputText
+        [ngModel]="item.reference"
+        (ngModelChange)="item.reference = $event; handleChange()"
+        id="reference"
+        title="reference"
+      />
+    </p-floatLabel>
 
     <p-floatLabel variant="on">
       <label for="id">Id</label>

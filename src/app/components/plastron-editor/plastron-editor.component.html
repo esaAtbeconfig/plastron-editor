@@ -131,12 +131,21 @@
       <ng-template #header>
         <div class="flex items-center justify-between p-4">
           <span class="p-card-title">XML</span>
-          <p-button
-            (onClick)="handleCopyToClipboard()"
-            icon="pi pi-copy"
-            pTooltip="Copier dans le presse-papier"
-            tooltipPosition="left"
-          ></p-button>
+          <div>
+            <p-button
+              (onClick)="handleCopyToClipboard()"
+              icon="pi pi-copy"
+              pTooltip="Copier dans le presse-papier"
+              tooltipPosition="left"
+            ></p-button>
+            <p-button
+              (onClick)="handleDownload()"
+              icon="pi pi-download"
+              pTooltip="Télécharger le fichier"
+              tooltipPosition="left"
+              class="plastron-button"
+            ></p-button>
+          </div>
         </div>
       </ng-template>
       <pre>{{ xmlString }}</pre>

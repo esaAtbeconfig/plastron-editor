@@ -35,4 +35,5 @@ label {
 .buttons-container > p-button > button {
     width: var(--p-avatar-lg-width) !important;
     height: var(--p-avatar-lg-width) !important;
+    min-width: 2.5rem;
 }

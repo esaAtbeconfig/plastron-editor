@@ -76,6 +76,34 @@ export class PlastronEditorComponent {
     });
   }
 
+  handleDownload() {
+    var name = "plastron";
+    var reference = this.commande.entete.reference;
+
+    if (reference) {
+      name = reference;
+    }
+
+    var filename = `${name}_${new Date().toJSON().slice(0,10)}.xml`;
+    var pom = document.createElement('a');
+    var bb = new Blob([this.xmlString], {type: 'text/plain'});
+
+    pom.setAttribute('href', window.URL.createObjectURL(bb));
+    pom.setAttribute('download', filename);
+
+    pom.dataset['downloadurl'] = ['text/plain', pom.download, pom.href].join(':');
+    pom.draggable = true;
+    pom.classList.add('dragout');
+
+    pom.click();
+
+    this.messageService.add({
+      severity: 'success',
+      summary: 'Succès',
+      detail: 'Le fichier xml a bien été téléchargé',
+    });
+  }
+
   prettifyXml(sourceXml: string) {
     var xmlDoc = new DOMParser().parseFromString(sourceXml, 'application/xml');
     var xsltDoc = new DOMParser().parseFromString(
