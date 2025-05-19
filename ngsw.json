@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1740151466451,
+  "timestamp": 1747646586550,
   "index": "/plastron-editor/index.html",
   "assetGroups": [
     {
@@ -18,10 +18,10 @@
         "/plastron-editor/chunk-ZY7WU73K.js",
         "/plastron-editor/favicon.ico",
         "/plastron-editor/index.html",
-        "/plastron-editor/main-ERDEN6CZ.js",
+        "/plastron-editor/main-MLTMROYQ.js",
         "/plastron-editor/manifest.webmanifest",
         "/plastron-editor/polyfills-FFHMD2TL.js",
-        "/plastron-editor/styles-XPMS7CH6.css"
+        "/plastron-editor/styles-AYY7TD3I.css"
       ],
       "patterns": []
     },
@@ -65,15 +65,15 @@
     "/plastron-editor/icons/icon-512x512.png": "0a3b7204243c78ef994c290ed8d9778bb82e2626",
     "/plastron-editor/icons/icon-72x72.png": "2db6d80bc25a6d8a0a0afb04ccf512b3aff56727",
     "/plastron-editor/icons/icon-96x96.png": "28f2b5cc8d86ebd8475c48a198d5429817f781b2",
-    "/plastron-editor/index.html": "23a2384fe7cba7a92bb7d98a7a374bb309f2aa65",
-    "/plastron-editor/main-ERDEN6CZ.js": "85f90a3bd383c2f2e5c1dc91fa1117b1653c2713",
+    "/plastron-editor/index.html": "ad0d1d8dbce0ac596d68638f62e4bc86ae297256",
+    "/plastron-editor/main-MLTMROYQ.js": "b770d36e7e3115f2c20052d0e559702b7a614f5c",
     "/plastron-editor/manifest.webmanifest": "7e2941fdc7671ddb5b87b2e5ed48c3b9ad0eaf99",
     "/plastron-editor/media/primeicons-4GST5W3O.woff2": "837c1279b6af9d297f34fdb43e6fcc9206a79f32",
     "/plastron-editor/media/primeicons-DHQU4SEP.svg": "a07ae39027c1a780b42fd82fad7575c2924d9d28",
     "/plastron-editor/media/primeicons-GEFHGEHP.ttf": "3b878ca7e88945a8ec25814810b95367d8977ae6",
     "/plastron-editor/media/primeicons-P53SE5CV.woff": "361e3af71bb4e515feead2f787348a92a5527158",
     "/plastron-editor/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "/plastron-editor/styles-XPMS7CH6.css": "ab20bbedde4d56f1c04dc0361aedb7a0ac13ff98"
+    "/plastron-editor/styles-AYY7TD3I.css": "6458d41b7208b6ffaabe5163aaaf6a13b6e8b61c"
   },
   "navigationUrls": [
     {
